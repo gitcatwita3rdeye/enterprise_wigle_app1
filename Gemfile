@@ -60,7 +60,7 @@ gem 'ransack', '~> 4.1'    # Advanced search
 gem 'friendly_id', '~> 5.5' # SEO friendly URLs
 gem 'geocoder', '~> 1.8'   # Geocoding capabilities
 gem 'rest-client', '~> 2.1' # HTTP client for AI APIs
-gem 'rack-cors', '~> 2.0'      # CORS for API endpoints
+gem 'rack-cors', '~> 3.0'      # CORS for API endpoints
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
