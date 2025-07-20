@@ -1,0 +1,37 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  ssid: MyString
+  bssid: MyString
+  encryption: MyString
+  frequency: 1
+  channel: 1
+  signal_strength: 1
+  latitude: 9.99
+  longitude: 9.99
+  altitude: 9.99
+  accuracy: 9.99
+  timestamp: 2025-07-20 14:12:52
+  vendor: MyString
+  capabilities: MyText
+  first_seen: 2025-07-20 14:12:52
+  last_seen: 2025-07-20 14:12:52
+  observation_count: 1
+
+two:
+  ssid: MyString
+  bssid: MyString
+  encryption: MyString
+  frequency: 1
+  channel: 1
+  signal_strength: 1
+  latitude: 9.99
+  longitude: 9.99
+  altitude: 9.99
+  accuracy: 9.99
+  timestamp: 2025-07-20 14:12:52
+  vendor: MyString
+  capabilities: MyText
+  first_seen: 2025-07-20 14:12:52
+  last_seen: 2025-07-20 14:12:52
+  observation_count: 1

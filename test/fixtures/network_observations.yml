@@ -1,0 +1,21 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  wifi_network: one
+  wardrive_session: one
+  latitude: 9.99
+  longitude: 9.99
+  altitude: 9.99
+  signal_strength: 1
+  timestamp: 2025-07-20 14:13:10
+  gps_accuracy: 9.99
+
+two:
+  wifi_network: two
+  wardrive_session: two
+  latitude: 9.99
+  longitude: 9.99
+  altitude: 9.99
+  signal_strength: 1
+  timestamp: 2025-07-20 14:13:10
+  gps_accuracy: 9.99

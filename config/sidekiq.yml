@@ -1,0 +1,16 @@
+:verbose: true
+:concurrency: 3
+:timeout: 30
+:queues:
+  - default
+  - [critical, 2]
+  - low
+
+# Redis configuration for Heroku
+production:
+  :concurrency: <%= ENV.fetch("RAILS_MAX_THREADS", 3) %>
+  :timeout: 30
+  
+development:
+  :concurrency: 3
+  :timeout: 30

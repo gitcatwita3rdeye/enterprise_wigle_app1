@@ -1,0 +1,27 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  description: MyText
+  start_time: 2025-07-20 14:13:01
+  end_time: 2025-07-20 14:13:01
+  user_name: MyString
+  device_info: MyText
+  total_networks: 1
+  unique_networks: 1
+  distance_covered: 9.99
+  file_format: MyString
+  status: MyString
+
+two:
+  name: MyString
+  description: MyText
+  start_time: 2025-07-20 14:13:01
+  end_time: 2025-07-20 14:13:01
+  user_name: MyString
+  device_info: MyText
+  total_networks: 1
+  unique_networks: 1
+  distance_covered: 9.99
+  file_format: MyString
+  status: MyString
