@@ -1,5 +1,5 @@
 require 'sidekiq'
-require 'sidekiq-web'
+require 'sidekiq/web'
 
 # Redis configuration
 redis_config = {

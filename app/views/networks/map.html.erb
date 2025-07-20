@@ -1,4 +1,95 @@
-<div>
-  <h1 class="font-bold text-4xl">Networks#map</h1>
-  <p>Find me in app/views/networks/map.html.erb</p>
+<div id="gis-container" class="min-h-screen bg-slate-900">
+  <!-- Header -->
+  <header class="bg-gradient-to-r from-blue-900 to-cyan-900 p-4 shadow-lg">
+    <div class="max-w-7xl mx-auto flex justify-between items-center">
+      <h1 class="text-2xl font-bold text-white">🌐 Advanced GIS Network Mapping</h1>
+      <div class="flex space-x-4">
+        <button id="satellite-toggle" class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors">
+          🛰️ Satellite View
+        </button>
+        <button id="heatmap-toggle" class="px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700 transition-colors">
+          🔥 Signal Heatmap
+        </button>
+        <button id="cluster-toggle" class="px-4 py-2 bg-purple-600 text-white rounded hover:bg-purple-700 transition-colors">
+          📊 Network Clusters
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Map Controls Panel -->
+  <div id="map-controls" class="absolute top-20 left-4 z-1000 bg-white/90 backdrop-blur-md rounded-lg p-4 shadow-xl max-w-xs">
+    <h3 class="font-bold text-lg mb-3 text-gray-800">🎛️ Map Controls</h3>
+    
+    <!-- Filter Controls -->
+    <div class="space-y-3">
+      <div>
+        <label class="block text-sm font-medium text-gray-700 mb-1">Security Filter:</label>
+        <select id="security-filter" class="w-full p-2 border border-gray-300 rounded">
+          <option value="all">All Networks</option>
+          <option value="open">Open Networks</option>
+          <option value="wep">WEP (Weak)</option>
+          <option value="wpa">WPA/WPA2</option>
+          <option value="wpa3">WPA3 (Strong)</option>
+        </select>
+      </div>
+      
+      <div>
+        <label class="block text-sm font-medium text-gray-700 mb-1">Signal Strength:</label>
+        <input type="range" id="signal-range" class="w-full" min="-100" max="-30" value="-80">
+        <div class="flex justify-between text-xs text-gray-600">
+          <span>Weak</span>
+          <span>Strong</span>
+        </div>
+      </div>
+      
+      <div>
+        <label class="block text-sm font-medium text-gray-700 mb-1">Time Range:</label>
+        <select id="time-filter" class="w-full p-2 border border-gray-300 rounded">
+          <option value="all">All Time</option>
+          <option value="24h">Last 24 Hours</option>
+          <option value="7d">Last 7 Days</option>
+          <option value="30d">Last 30 Days</option>
+        </select>
+      </div>
+      
+      <button id="wigle-sync" class="w-full px-4 py-2 bg-orange-600 text-white rounded hover:bg-orange-700 transition-colors">
+        🌐 Sync with WiGLE.net
+      </button>
+    </div>
+  </div>
+
+  <!-- Network Details Panel -->
+  <div id="network-details" class="absolute top-20 right-4 z-1000 bg-white/90 backdrop-blur-md rounded-lg p-4 shadow-xl max-w-sm hidden">
+    <h3 class="font-bold text-lg mb-3 text-gray-800">📊 Network Details</h3>
+    <div id="network-info" class="space-y-2"></div>
+    <button id="close-details" class="mt-4 px-4 py-2 bg-gray-600 text-white rounded hover:bg-gray-700 transition-colors">
+      Close
+    </button>
+  </div>
+
+  <!-- Map Container -->
+  <div id="map" class="w-full h-screen"></div>
+
+  <!-- Statistics Overlay -->
+  <div id="stats-overlay" class="absolute bottom-4 left-4 z-1000 bg-black/80 backdrop-blur-md rounded-lg p-4 text-white">
+    <div class="grid grid-cols-2 gap-4 text-sm">
+      <div>
+        <div class="text-cyan-400 font-semibold">Total Networks</div>
+        <div id="total-networks" class="text-xl font-bold">0</div>
+      </div>
+      <div>
+        <div class="text-red-400 font-semibold">Open Networks</div>
+        <div id="open-networks" class="text-xl font-bold">0</div>
+      </div>
+      <div>
+        <div class="text-green-400 font-semibold">Coverage Area</div>
+        <div id="coverage-area" class="text-xl font-bold">0 km²</div>
+      </div>
+      <div>
+        <div class="text-yellow-400 font-semibold">Avg Signal</div>
+        <div id="avg-signal" class="text-xl font-bold">0 dBm</div>
+      </div>
+    </div>
+  </div>
 </div>
