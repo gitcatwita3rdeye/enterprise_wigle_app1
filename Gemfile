@@ -50,7 +50,7 @@ gem 'rgeo', '~> 3.0'       # Advanced GIS capabilities
 gem 'rgeo-geojson', '~> 2.1'  # GeoJSON support
 gem 'rgeo-kml', '~> 0.0.1' # KML parsing
 gem 'csv', '~> 3.2'        # Enhanced CSV parsing
-gem 'sidekiq', '~> 7.2'    # Background job processing
+gem 'sidekiq', '~> 8.0'    # Background job processing
 gem 'redis', '~> 5.0'      # Redis for Sidekiq and caching
 gem 'pg', '~> 1.5'         # PostgreSQL for production
 gem 'image_processing', '~> 1.2'  # For image variants
