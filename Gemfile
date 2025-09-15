@@ -43,7 +43,7 @@ gem "thruster", require: false
 # gem "image_processing", "~> 1.2"
 
 # Enterprise Wardriving Platform Gems
-gem 'nokogiri', '~> 1.15'  # For XML/KML parsing
+gem 'nokogiri', '~> 1.18'  # For XML/KML parsing
 gem 'rubyzip', '~> 2.3'    # For archive handling
 gem 'httparty', '~> 0.21'  # For WiGLE.net API integration
 gem 'rgeo', '~> 3.0'       # Advanced GIS capabilities
